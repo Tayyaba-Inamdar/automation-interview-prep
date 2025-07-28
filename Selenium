@@ -1,0 +1,111 @@
+
+
+# Java
+
+### 1. WJP to Check if Two Strings Are Anagrams
+
+```java
+String str1 = "tomato";
+String str2 = "matoto";
+
+// Steps: Convert to char arrays, sort, and compare
+char[] arr1 = str1.toCharArray();
+char[] arr2 = str2.toCharArray();
+Arrays.sort(arr1);
+Arrays.sort(arr2);
+boolean result = Arrays.equals(arr1, arr2);
+System.out.println("Are Anagrams? " + result);
+```
+
+### 2. WJP to Remove Duplicates from a String
+
+```java
+String str = "automation";
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i < str.length(); i++) {
+    char ch = str.charAt(i);
+    if (sb.indexOf(String.valueOf(ch)) == -1) {
+        sb.append(ch);
+    }
+}
+System.out.println(sb.toString()); // Output: automin
+```
+
+---
+
+# QA Strategy
+
+### 3. Strategy to Start Failure Analysis from Day 1
+
+* Start validating test results in parallel to test execution.
+* Categorize failures: Code, Data, Environment, or Application.
+* Maintain a shared bug triage tracker.
+
+### 4. How to Calculate ROI for Automation
+
+ROI = (Manual Effort Saved - Automation Cost) / Automation Cost
+
+* Example: If manual takes 100 hrs and automation does in 10 hrs with a cost of 20 hrs to build: ROI = (90 - 20)/20 = 3.5
+
+### 5. Assigning Work for Junior vs Senior Testers
+
+* Seniors: Critical modules, review automation, framework tasks
+* Juniors: Regression, script maintenance, smoke test
+* Use buddy system for skill development
+
+### 6. QA Lead Checklist for Code Review
+
+* Proper use of waits
+* No hardcoded values (use config)
+* Proper naming conventions
+* Reusable methods and modularity
+* Assertion coverage
+
+---
+
+# Selenium
+
+### 7. How to Perform Cross-Browser Testing
+
+* Use Selenium Grid or tools like BrowserStack/SauceLabs
+* Use WebDriverManager to set up drivers
+* Run tests in parallel for different browsers
+
+### 8. Retry Failed Test Cases Automatically
+
+* Implement IRetryAnalyzer interface in TestNG
+* Use listeners to rerun failed tests
+
+### 9. How to Execute All Failed Test Cases After First Execution
+
+* Enable "testng-failed.xml" feature in TestNG
+* After main suite, it creates an XML to rerun only failed tests
+
+### 10. Difference: RemoteDriver vs WebDriver
+
+| Feature | WebDriver | RemoteWebDriver  |
+| ------- | --------- | ---------------- |
+| Use     | Local     | Remote/Grid      |
+| Setup   | Easy      | Needs Grid setup |
+
+### 11. Selenium 3 vs Selenium 4 Architecture
+
+* Selenium 3: WebDriver -> JSON Wire Protocol -> Browser
+* Selenium 4: WebDriver talks directly using W3C Protocol
+
+### 12. Topmost Interface in Selenium
+
+* SearchContext is the topmost interface in Selenium.
+
+### 13. What causes `StaleElementReferenceException` in Selenium?
+
+This occurs when:
+
+- The element you’re trying to interact with is no longer attached to the DOM.
+- Page has refreshed or DOM changed after locating the element.
+
+### ✅ Solution
+- Re-locate the element again before performing any action.
+```java
+WebElement element = driver.findElement(By.id("submit"));
+element.click();  // might go stale if DOM refreshed, re-find before clicking
