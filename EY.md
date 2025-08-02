@@ -18,6 +18,7 @@
 * What is the purpose of the static keyword in Java?
 * What collection topics have you used in your framework?
 * Difference between ArrayList and LinkedList?
+* private & protected keyword
 
 
 ### ➤ Coding Challenges
@@ -85,6 +86,7 @@ WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), 
 * Difference between verification and validation
 * How to handle dynamic elements in Selenium
 * Topmost interface in Selenium
+* Execption in selenium how to resolve them
 
 ### ➤ Frameworks & Execution
 
@@ -116,6 +118,12 @@ WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), 
 
 * Write a Rest Assured script to fetch a user profile and validate username
 * What is the difference between path parameter and query parameter in APIs?
+* Response code 201 204 300
+* Api security testing
+* Mock Api
+* negavtive testing in api
+* validate response/status ccode
+  
 
 ---
 
@@ -137,6 +145,7 @@ WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), 
 ## ✅ Agile & Testing Strategy
 
 * What does "Velocity" refer to in Agile Testing?
+* Burnup Charts And Burndown Charts
 * What is the strategy to start failure analysis from Day 1?
 * How to calculate ROI for automation?
 * How to identify test cases that can be automated?
