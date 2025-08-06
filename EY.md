@@ -87,6 +87,8 @@ WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), 
 * How to handle dynamic elements in Selenium
 * Topmost interface in Selenium
 * Execption in selenium how to resolve them
+* Write a script to select a specific city from a dropdown (100+ options)
+* Java statement meaning: WebDriver driver = new FirefoxDriver();
 
 ### ➤ Frameworks & Execution
 
@@ -169,7 +171,4 @@ WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), 
 
 ---
 
-## ✅ Miscellaneous
 
-* Write a script to select a specific city from a dropdown (100+ options)
-* Java statement meaning: WebDriver driver = new FirefoxDriver();
